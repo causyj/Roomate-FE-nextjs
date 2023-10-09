@@ -8,13 +8,30 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
+        fontFamily: {
+            eng: ['var(--google-sans)'],
+            kor: ['var(--pretendard)'],
+        },
+        fontSize: {
+            '8xl': '6rem',
+            '6xl': '3.75rem',
+            '5xl': '3rem',
+            '3xl': '1.875rem',
+            '2xl': '1.5rem',
+            'xl' : '1.25rem',
+        },
+        colors: {
+            background: '#18181B',
+            primary: {
+                yellow: '#FFE247',
+                teal: '#00ECC1',
+                blue: '#1753F1',
+                purple: '#946AFE',
+                accent: '#A93D4C',
+            },
+        },
     },
-  },
+},
   plugins: [],
 }
 export default config
