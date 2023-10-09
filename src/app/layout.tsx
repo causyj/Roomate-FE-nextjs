@@ -3,6 +3,9 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Link from 'next/link'
 import localFont from 'next/font/local'
+import CssBaseline from '@mui/material/CssBaseline';
+import { ThemeProvider } from '@mui/material/styles';
+import theme from './theme';
 
 const pretendard = localFont({
   src: [
@@ -49,12 +52,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="kr" className={`${googleSans.variable} ${pretendard.variable}`}>
-      <body className="h-screen max-h-screen min-h-screen" bg-background font-kor >
+      <head />
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <body className="h-screen max-h-screen min-h-screen" bg-background font-kor >
         <Links />
         <>
         {children}
         </>
       </body>
+      </ThemeProvider>
     </html>
   )
 }
