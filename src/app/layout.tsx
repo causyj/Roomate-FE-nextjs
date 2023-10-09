@@ -1,6 +1,5 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import Link from 'next/link'
 import localFont from 'next/font/local'
 import CssBaseline from '@mui/material/CssBaseline';
@@ -22,11 +21,6 @@ const pretendard = localFont({
   variable: '--pretendard',
 })
 
-const googleSans = Inter({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--google-sans',
-})
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -34,14 +28,15 @@ export const metadata: Metadata = {
 }
 const Links = () => {
   return (
-    <div className="flex flex-row items-center justify-center gap-32">
+    <div className="flex flex-row items-center justify-between gap-4">
+            <Link href="/">main</Link>
             <Link href="/login">login</Link>
             <Link href="/signup">signup</Link>
             <Link href="/typetest">typetests</Link>
-            <Link href="/type">type</Link>
+            <Link href="/type">type1</Link>
             <Link href="/recommend">recommend</Link>
             <Link href="/recommendationresult">recommendationresult</Link>
-            <Link href="/">main</Link>
+            
     </div>
   )
 }
@@ -51,17 +46,20 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="kr" className={`${googleSans.variable} ${pretendard.variable}`}>
-      <head />
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <body className="h-screen max-h-screen min-h-screen" bg-background font-kor >
+    <html lang="kr" className={`${pretendard.variable} ${pretendard.variable}`}>
+      <head/>
+      {/* <ThemeProvider theme={theme}>
+        <CssBaseline /> */}
+        <body className="h-screen max-h-screen min-h-screen" bg-theme-background font-kor text-theme-font>
+        <div>
         <Links />
-        <>
+        </div>
+        <main className='mx-auto h-full w-2/3'>
         {children}
-        </>
+        </main>
       </body>
-      </ThemeProvider>
+      {/* </ThemeProvider> */}
+     
     </html>
   )
 }
