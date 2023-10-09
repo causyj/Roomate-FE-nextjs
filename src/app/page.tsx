@@ -15,6 +15,7 @@ export default function Home() {
       <Button variant="outlined">Outlined</Button>
       <Textfield variant="outlined">dd</Textfield>
       <TextField id="standard-basic" label="Standard" variant="standard" />
+      <div className='text-700'>abcdefghijklmnopq</div>
     </main>
   )
 }
