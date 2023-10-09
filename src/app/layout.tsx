@@ -5,7 +5,8 @@ import localFont from 'next/font/local'
 import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider } from '@mui/material/styles';
 import theme from './theme';
-import { BottomNavBar } from './_components/bottomNavBar/NavBar'
+import { BottomNavBar } from './_components/bottomNavBar/BottomNavBar';
+
 const pretendard = localFont({
   src: [
       { path: './styles/fonts/100.woff', weight: '100', style: 'normal' },
@@ -29,10 +30,7 @@ export const metadata: Metadata = {
 const Links = () => {
   return (
     <div className="flex flex-row items-center justify-between gap-4">
-<<<<<<< HEAD
             <Link href="/">main</Link>
-=======
->>>>>>> f806e0e (Added BottomNavBar Component)
             <Link href="/login">login</Link>
             <Link href="/signup">signup</Link>
             <Link href="/typetest">typetests</Link>
@@ -54,15 +52,9 @@ export default function RootLayout({
       {/* <ThemeProvider theme={theme}>
         <CssBaseline /> */}
         <body className="h-screen max-h-screen min-h-screen" bg-theme-background font-kor text-theme-font>
-        <div>
         <Links />
-<<<<<<< HEAD
-        </div>
-        <main className='mx-auto h-full w-2/3'>
-=======
         <BottomNavBar />
-        <main  className="mx-auto h-full w-full px-10">
->>>>>>> f806e0e (Added BottomNavBar Component)
+        <main className='mx-auto h-full w-2/3'>
         {children}
         </main>
       </body>
