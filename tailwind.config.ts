@@ -24,7 +24,6 @@ const config: Config = {
             background: '#18181B',
             primary: {
                 yellow: '#FFE247',
-                hotpink: '#FF3C76',
                 teal: '#00ECC1',
                 blue: '#1753F1',
                 purple: '#946AFE',

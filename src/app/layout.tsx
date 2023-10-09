@@ -6,15 +6,15 @@ import localFont from 'next/font/local'
 
 const pretendard = localFont({
   src: [
-      { path: '../styles/fonts/100.woff', weight: '100', style: 'normal' },
-      { path: '../styles/fonts/200.woff', weight: '200', style: 'normal' },
-      { path: '../styles/fonts/300.woff', weight: '300', style: 'normal' },
-      { path: '../styles/fonts/400.woff', weight: '400', style: 'normal' },
-      { path: '../styles/fonts/500.woff', weight: '500', style: 'normal' },
-      { path: '../styles/fonts/600.woff', weight: '600', style: 'normal' },
-      { path: '../styles/fonts/700.woff', weight: '700', style: 'normal' },
-      { path: '../styles/fonts/800.woff', weight: '800', style: 'normal' },
-      { path: '../styles/fonts/900.woff', weight: '900', style: 'normal' },
+      { path: './styles/fonts/100.woff', weight: '100', style: 'normal' },
+      { path: './styles/fonts/200.woff', weight: '200', style: 'normal' },
+      { path: './styles/fonts/300.woff', weight: '300', style: 'normal' },
+      { path: './styles/fonts/400.woff', weight: '400', style: 'normal' },
+      { path: './styles/fonts/500.woff', weight: '500', style: 'normal' },
+      { path: './styles/fonts/600.woff', weight: '600', style: 'normal' },
+      { path: './styles/fonts/700.woff', weight: '700', style: 'normal' },
+      { path: './styles/fonts/800.woff', weight: '800', style: 'normal' },
+      { path: './styles/fonts/900.woff', weight: '900', style: 'normal' },
   ],
   variable: '--pretendard',
 })
